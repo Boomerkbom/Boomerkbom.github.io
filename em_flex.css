@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/*
+   WEB-110-N801 Project 1
+   
+   Museum of Eras website
+   Author: Daniel Molina
+   Date:   10/23/2023
+   
+   Filename: em_flex.css
+
+*/
+
+section {
+  display: flex;
+  flex-flow: row wrap-reverse;
+}
+
+div.card {
+  flex: 1 1 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}

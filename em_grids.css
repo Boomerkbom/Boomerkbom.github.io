@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*
+   WEB-110-N801 Project 2
+   
+   Museum of Eras website
+   Author: Daniel Molina
+   Date:   10/23/2023
+   
+   Filename: em_grids.css
+
+*/
+
+
+/* Grid Styles for Page Body */
+
+/*creating a grid layout*/body {
+	display:grid;
+	grid-template-columns: 1fr 10fr 10fr 1fr;
+	grid-template-areas: "backgroundl header header backgroundr"
+						 "backgroundl nav nav backgroundr"
+						 "backgroundl nav nav backgroundr "
+						 "backgroundl footer footer backgroundr";
+	grid-column-gap:15px;
+}
+
+/*Mobile responsive design*/@media only screen and (max-width: 480px) {
+	body {
+	display:grid;
+	grid-template-columns: 1fr 10fr 10fr 1fr;
+	grid-template-areas: "header header"
+						 "nav nav"
+						 "nav nav "
+						 "footer footer";
+	grid-column-gap:15px;
+}
+}
+
+body > header {
+	grid-row: 1;
+	grid-column: 2/-2;
+}
+
+body > header {grid-area:header;}
+body > aside#left {grid-area:backgroundl;}
+body > aside#right {grid-area:backgroundr;}
+body > footer {grid-area:footer;}
+body > section {grid-area:nav;}
+
+/* Grid Styles for Nested Grid */
+
+section {
+	display:grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/*
+section > h1 {
+	grid-area: 1/1/2/3;
+}
+*/
+
+header img {
+	width: 100%;
+}
+
+aside img {
+	height: 100%;

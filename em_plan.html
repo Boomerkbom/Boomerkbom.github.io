@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+   WEB-110-N801 Project 2
+   
+   Museum of Eras website
+   Author: Daniel Molina
+   Date:   12/10/2023
+   
+   Filename: em_plan.html
+   -->
+   
+   <title>Sheduling Era Museum</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <!--CSS Link--><link href="em_flex.css" rel="stylesheet" />
+   <link href="em_glayout.css" rel="stylesheet" />
+   <link href="em_nav.css" rel="stylesheet" />
+   <link href="em_forms.css" rel="stylesheet" />
+   <script src="rb_formsubmit.js"></script> <!-- This js file is taken directly from the Chapter 7 website and may not be compatible so is working as a placeholder -->
+</head>
+
+<body>
+<section id="modern"><img src="em_logo.jpg" alt="" /></section>
+   <header>
+      
+      <nav class="horizontal">
+         <ul class="mainmenu">
+            <li><a href="em_home.html">Home</a></li>
+            <li><a href="#" class="submenuTitle">Schedule a visit &#9654;</a>
+               <ul class="submenu">
+                  <li><a href="#">Dates</a></li>
+                  <li><a href="#">Locations</a></li>
+                  <li><a href="#">Registration</a></li>
+               </ul>
+            </li>
+            <li><a href="#" class="submenuTitle">Galleries &#9654;</a>
+               <ul class="submenu">
+                  <li><a href="#">Ancient</a></li>
+                  <li><a href="#">Renaissance</a></li>
+                  <li><a href="#">Impressionism</a></li>
+                  <li><a href="em_modern.html">Modern Art</a></li>                 
+               </ul>
+            </li>
+            <li><a href="em_about.html">About Us</a> </li>
+            <li><a href="#">Contact Us</a> </li>
+         </ul>
+      </nav>
+   </header>
+
+    <!--Sectioning and grouping-->  
+   <section>
+	  <div class="card">
+		 <header><h1>Scheduling</h1></header>
+         <p>Here at the Era Museum we offer tours at a variety of times. Here you can schedule one and Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 <!--text-level element--><br />Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		 </p>
+      </div>
+   </section>
+
+   <section>
+	  <!--form-->
+	  <form id="survey" action="http://www.example.com/redball/survey" method="post">
+		 <!--fieldset-->
+		 <fieldset id="custinfo">
+			 <legend>Customer Information</legend>
+			 <div class="formRow">
+				 <label for="name">Name*</label>
+				 <!--Text Input--> <!--Data Validation with Required Field-->
+				 <input name="custName" id="name" type="text" placeholder="first name last name" required />
+			 </div>
+			 <div class="formRow">
+				 <label for="street">Street Adress</label>
+				 <input name="custStreet" id="street" type="text" />
+			 </div>
+			 <div class="formRow">
+				 <label for="city">City</label>
+				 <input name="custCity" id="city" type="text" value="Charlotte" />
+			 </div>
+			 <div class="formRow">
+				 <label for="state">State</label>
+				 <input name="custState" id="state" type="text" value="NC" />
+			 </div>
+			 <div class="formRow">
+				 <label for="zip">Postal Code</label>
+				 <!--Data validated with patterns and field length-->
+				 <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$"/>
+			 </div>
+			 <div class="formRow">
+				 <!--Mobile Keyboard Specific Input-->
+				 <label for="zip">Phone Number</label>
+				 <input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+			 </div>
+			 <div class="formRow">
+				 <label for="mail">E-mail*</label>
+				 <input name="custEmail" id="mail" type="email" required />
+			 </div>
+			 <div class="formRow">
+				 <label for="info">Where did you hear about us?
+				 <br />(select all that apply)
+				 </label>
+				 <!--Selection List-->
+				 <select name="infoSrc" id="info" size="5" multiple>
+					 <option value="internet">Internet</option>
+					 <option value="mag">Magazine</option>
+					 <option value="news">Newspaper</option>
+					 <option value="word">Word of mouth</option>
+					 <option value="tour">From other tours</option>
+					 <option value="other">Other</option>
+				 </select>
+			 </div>
+			 <div class="formRow">
+				 <label for="dish">Which exhibit are you most interested in?</label>
+				 <input name="favDish" id="dish" type="text" list="dishType"/>
+				 <!--Data List-->
+				 <datalist id="dishType">
+					 <option value="Ancient">
+					 <option value="Renaissance">
+					 <option value="Impressionism">
+					 <option value="Modern Art">
+				 </datalist>
+			 </div>
+			 <div class="formRow">
+				 <label for="dineSpin">How many museums have you gone to?</label>
+				 <!--Spinner Input-->
+				 <input name="dineOut" id="dineSpin" value="1" step="1" min="0" max="30" type="number" />
+			 </div>
+			 <div class="formRow">
+				 <!--Checkbox Input-->
+				 <input name="mailMe" id="mailCB" value="yes" type="checkbox" />
+				 <label for="mailCB">Add me to your mailing list for announcements of new exhibits!</label>
+			 </div>
+		 </fieldset>
+		 <!--second fieldset-->
+		 <fieldset id="expinfo">
+			 <legend>Planning the Visit</legend>
+			 
+			 <div class="formRow">
+				 <label for="visit">Date of Visit</label>
+				 <!--Date Input-->
+				 <input name="visitDate" id="visit" type="date" />
+			 </div>
+			 <div class="formRow">
+				 <label for="order">Branch Visting</label>
+				 <select name="orderType" id="order">
+					 <option value="order1" selected>Branch A</option>
+					 <option value="order2">Branch B</option>
+					 <option value="order3">Branch C</option>
+					 <option value="order4">Branch D</option>
+				 </select>
+			 </div>
+			 <div class="formRow">
+				 <label>Traveling guide?</label>
+				 <fieldset class="optgroup">
+					 <!--Radio Input-->
+					 <label for="fYes">Yes</label>
+					 <input name="sFriend" id="fYes" value="yes" type="radio" />
+					 <label for="fno">No</label>
+					 <input name="sFriend" id="fNo" value="no" type="radio" />
+				 </fieldset>
+			 </div>
+			 <div class="formRow">
+				 <label>Professional Vist?</label>
+				 <fieldset class="optgroup">
+					 <label for="fYes">Yes</label>
+					 <input name="oCorrect" id="fYes" value="yes" type="radio" />
+					 <label for="fno">No</label>
+					 <input name="oCorrect" id="fNo" value="no" type="radio" />
+				 </fieldset>
+			 </div>
+			 <div class="formRow">
+				 <label>Return Visitor?</label>
+				 <fieldset class="optgroup">
+					 <label for="fYes">Yes</label>
+					 <input name="foodHot" id="fYes" value="yes" type="radio" />
+					 <label for="fno">No</label>
+					 <input name="foodHot" id="fNo" value="no" type="radio" />
+				 </fieldset>
+			 </div>
+			 <div class="formRow">
+				 <!--Range Slider-->
+				 <label for="rangeBox">Number of people<br />(Children count as 2)</label>
+				 0
+				 <input name="serviceRate" id="rangeBox" type="range" value="5" step="1" min="0" max="10" />
+				 10
+			 </div>
+			 <div class="formRow">
+				 <label for="commBox">Are there any special needs or accomedations that a tourguide should know about?</label>
+				 <!--Text Area-->
+				 <textarea name="custExp" id="commBox"></textarea>
+			 </div>
+		 </fieldset>
+		 <!--Submit and Reset Buttons-->
+		 <div id="buttons">
+			 <input type="submit" value="Submit My Survey" />
+			 <input type="reset" value="Cancel" />
+		 </div>
+	  </form> 
+   </section>
+   
+</body>
+
+</html>

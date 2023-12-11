@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/*
+   WEB-110-N801 Project 1
+   
+   Museum of Eras website
+   Author: Daniel Molina
+   Date:   10/23/2023
+   
+   Filename: em_nav.css
+
+*/
+
+nav.horizontal {
+   background-color: teal;
+   min-height: 2em;
+}
+
+/*Format Lists*/nav.horizontal li {
+   color: blue;
+   display: block;
+   line-height: 2em;
+   text-transform: uppercase;
+}
+
+nav.horizontal a {
+   display: block;
+   font-size: 1em;
+}
+
+/*Pseudo Class*/nav.horizontal a:visited, nav.horizontal a:link {
+   color: navy;
+}
+
+/*Pseudo class for hypertext link*/nav.horizontal a:hover, nav.horizontal a:active {
+   background-color: aqua;
+   color: black;
+}
+
+/* Main Menu Styles */
+
+ul.mainmenu {
+   /*Block Element*/display: block;
+}
+
+/*Contextual attribute selector*/ul.mainmenu > li {
+   text-indent: 15px;
+}
+
+ul.mainmenu > li:first-of-type a {
+   color: white;
+   background-color: rgb(31, 73, 125);
+}
+
+/* Submenu Styles */
+
+ul.submenu {
+   width: 100%;
+   background-color: rgb(181, 204, 136);
+}
